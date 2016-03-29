@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1.
+        User list (#{users.length})
+    a(href='/newuser') New User
+    ul
+        each user, i in users
+            li
+                a(href="getuser/#{user._id}") #{user.name} #{user.surname}

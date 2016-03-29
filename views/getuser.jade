@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+
+    h2.
+        #{user[0].name} #{user[0].surname}
+
+    p
+        a(href='/updateuser/#{user[0]._id}') update
+        &nbsp;
+        a(href='/deleteuser/#{user[0]._id}') delete
+        &nbsp;
+        a(href='/userlist') cancel
